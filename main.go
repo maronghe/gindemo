@@ -10,10 +10,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"gopkg.in/natefinch/lumberjack.v2"
 
-	"github.com/julienschmidt/httprouter"
+	_ "gindemo/docs"
 
 	"gindemo/global"
 	"gindemo/internal/model"
+	"gindemo/internal/routers"
 	"gindemo/pkg/logger"
 	"gindemo/pkg/setting"
 )
@@ -24,16 +25,14 @@ func init() {
 	must(setupDBEngine())
 }
 
-func Index(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
-	fmt.Fprint(w, "Welcome!\n")
-}
-
+// @title demo system
+// @version 1.0
+// @description gin framework
+// @termsOfService https://www.baidu.com
 func main() {
+	router := routers.NewRouter()
 
 	gin.SetMode(global.ServerSetting.RunMode)
-
-	router := httprouter.New()
-	router.GET("/", Index)
 
 	s := &http.Server{
 		Addr:           ":" + strconv.Itoa(global.ServerSetting.HttpPort),

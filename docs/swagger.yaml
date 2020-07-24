@@ -1,0 +1,62 @@
+definitions:
+  errorcode.Error:
+    properties:
+      code:
+        type: integer
+      details:
+        items:
+          type: string
+        type: array
+      msg:
+        type: string
+    type: object
+  testmode.Tag:
+    type: object
+info:
+  contact: {}
+  description: gin framework
+  license: {}
+  termsOfService: https://www.baidu.com
+  title: demo system
+  version: "1.0"
+paths:
+  /api/v1/tags:
+    get:
+      parameters:
+      - description: 标签名称
+        in: query
+        maxLength: 100
+        name: name
+        type: string
+      - description: 状态
+        enum:
+        - 0
+        - 1
+        in: query
+        name: state
+        type: integer
+      - description: 页码
+        in: query
+        name: page
+        type: integer
+      - description: 每页数量
+        in: query
+        name: page_size
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功
+          schema:
+            $ref: '#/definitions/testmode.Tag'
+        "400":
+          description: 请求错误
+          schema:
+            $ref: '#/definitions/errorcode.Error'
+        "500":
+          description: 内部错误
+          schema:
+            $ref: '#/definitions/errorcode.Error'
+      summary: 获取多个标签
+swagger: "2.0"

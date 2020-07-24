@@ -1,4 +1,4 @@
-package error
+package errorcode
 
 var (
 	Success                   = NewError(0, "成功")
