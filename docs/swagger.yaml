@@ -1,4 +1,13 @@
 definitions:
+  app.Pager:
+    properties:
+      page:
+        type: integer
+      page_size:
+        type: integer
+      total_rows:
+        type: integer
+    type: object
   errorcode.Error:
     properties:
       code:
@@ -11,6 +20,16 @@ definitions:
         type: string
     type: object
   testmode.Tag:
+    type: object
+  testmode.TagSwagger:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/testmode.Tag'
+        type: array
+      pager:
+        $ref: '#/definitions/app.Pager'
+        type: object
     type: object
 info:
   contact: {}
@@ -49,7 +68,7 @@ paths:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/testmode.Tag'
+            $ref: '#/definitions/testmode.TagSwagger'
         "400":
           description: 请求错误
           schema:

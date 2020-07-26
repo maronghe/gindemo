@@ -50,7 +50,7 @@
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/testmode.Tag"
+                            "$ref": "#/definitions/testmode.TagSwagger"
                         }
                     },
                     "400": {
@@ -70,6 +70,20 @@
         }
     },
     "definitions": {
+        "app.Pager": {
+            "type": "object",
+            "properties": {
+                "page": {
+                    "type": "integer"
+                },
+                "page_size": {
+                    "type": "integer"
+                },
+                "total_rows": {
+                    "type": "integer"
+                }
+            }
+        },
         "errorcode.Error": {
             "type": "object",
             "properties": {
@@ -89,6 +103,21 @@
         },
         "testmode.Tag": {
             "type": "object"
+        },
+        "testmode.TagSwagger": {
+            "type": "object",
+            "properties": {
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/testmode.Tag"
+                    }
+                },
+                "pager": {
+                    "type": "object",
+                    "$ref": "#/definitions/app.Pager"
+                }
+            }
         }
     }
 }
