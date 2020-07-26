@@ -21,7 +21,8 @@ func NewRouter() *gin.Engine {
 	apiv1 := r.Group("/api/v1")
 
 	{
-		apiv1.GET("/tags", testmode.NewTag().Get)
+		apiv1.GET("/tag", testmode.NewTag().Get)
+		apiv1.GET("/tags", testmode.NewTag().List)
 	}
 
 	return r

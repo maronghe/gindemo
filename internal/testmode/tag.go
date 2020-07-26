@@ -1,8 +1,11 @@
 package testmode
 
 import (
+	"fmt"
+
 	"github.com/gin-gonic/gin"
 
+	"gindemo/global"
 	"gindemo/pkg/app"
 	"gindemo/pkg/errorcode"
 )
@@ -10,6 +13,7 @@ import (
 type Tag struct {
 }
 
+// used for swagger...
 type TagSwagger struct {
 	List  []*Tag
 	Pager *app.Pager
@@ -35,6 +39,19 @@ func (t Tag) Get(c *gin.Context) {
 // @Failure 500 {object} errorcode.Error "内部错误"
 // @Router /api/v1/tags [get]
 func (t Tag) List(c *gin.Context) {
-	app.NewResponse(c).ToErrorResponse(errorcode.ServerError)
+
+	params := struct {
+		Name  string `form:"name" binding="max=100"`
+		State uint8  `form:"state,default=1" binding:"oneof=0 1"`
+	}{}
+
+	response := app.NewResponse(c)
+	valid, errs := app.BindAndValid(c, &params)
+	if errs != nil {
+		global.Logger.Warnf("BindAndValid err %+v", errs)
+		response.ToErrorResponse(errorcode.InvalidParams.WithDetails(errs.Errors()...))
+		return
+	}
+	response.ToResponse(errorcode.Success.WithDetails(fmt.Sprintf("valid is %t", valid), "669"))
 	return
 }
