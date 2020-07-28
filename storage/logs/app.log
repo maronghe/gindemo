@@ -1,0 +1,35 @@
+2020/07/28 23:24:24 {"callers":null,"level":"info","message":"Logan db init success","time":1595949864334109000}
+2020/07/28 23:24:24 {"callers":null,"level":"info","message":"Server starting... \u0026http.Server{Addr:\":8000\", Handler:(*gin.Engine)(0xc000148000), TLSConfig:(*tls.Config)(nil), ReadTimeout:60000000000, ReadHeaderTimeout:0, WriteTimeout:60000000000, IdleTimeout:0, MaxHeaderBytes:1048576, TLSNextProto:map[string]func(*http.Server, *tls.Conn, http.Handler)(nil), ConnState:(func(net.Conn, http.ConnState))(nil), ErrorLog:(*log.Logger)(nil), BaseContext:(func(net.Listener) context.Context)(nil), ConnContext:(func(context.Context, net.Conn) context.Context)(nil), disableKeepAlives:0, inShutdown:0, nextProtoOnce:sync.Once{done:0x0, m:sync.Mutex{state:0, sema:0x0}}, nextProtoErr:error(nil), mu:sync.Mutex{state:0, sema:0x0}, listeners:map[*net.Listener]struct {}(nil), activeConn:map[*http.conn]struct {}(nil), doneChan:(chan struct {})(nil), onShutdown:[]func()(nil)}","time":1595949864334591000}
+2020/07/28 23:27:20 {"callers":null,"level":"debug","message":"false \u0026{0xc000130500 map[] map[] map[] map[]}","time":1595950040691029000}
+2020/07/28 23:27:20 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950040691383000}
+2020/07/28 23:27:50 {"callers":null,"level":"debug","message":"false \u0026{0xc000224000 map[] map[] map[] map[]}","time":1595950070776799000}
+2020/07/28 23:27:50 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950070777061000}
+2020/07/28 23:28:04 {"callers":null,"level":"debug","message":"false \u0026{0xc000320500 map[] map[] map[] map[]}","time":1595950084038778000}
+2020/07/28 23:28:04 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950084039123000}
+2020/07/28 23:29:09 {"callers":null,"level":"debug","message":"false \u0026{0xc000224280 map[] map[] map[] map[]}","time":1595950149992667000}
+2020/07/28 23:29:09 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950149992912000}
+2020/07/28 23:30:39 {"callers":null,"level":"debug","message":"true \u0026{0xc000320780 map[] map[] map[] map[]}","time":1595950239899990000}
+2020/07/28 23:30:39 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950239900164000}
+2020/07/28 23:31:18 {"callers":null,"level":"debug","message":"true \u0026{0xc000321400 map[] map[] map[] map[]}","time":1595950278614774000}
+2020/07/28 23:31:18 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950278615482000}
+2020/07/28 23:31:18 {"callers":null,"level":"errcode","message":"svc.UploadFile err: file suffix is not supported.","time":1595950278615782000}
+2020/07/28 23:31:45 {"callers":null,"level":"info","message":"Logan db init success","time":1595950305865980000}
+2020/07/28 23:31:45 {"callers":null,"level":"info","message":"Server starting... \u0026http.Server{Addr:\":8000\", Handler:(*gin.Engine)(0xc0000d8000), TLSConfig:(*tls.Config)(nil), ReadTimeout:60000000000, ReadHeaderTimeout:0, WriteTimeout:60000000000, IdleTimeout:0, MaxHeaderBytes:1048576, TLSNextProto:map[string]func(*http.Server, *tls.Conn, http.Handler)(nil), ConnState:(func(net.Conn, http.ConnState))(nil), ErrorLog:(*log.Logger)(nil), BaseContext:(func(net.Listener) context.Context)(nil), ConnContext:(func(context.Context, net.Conn) context.Context)(nil), disableKeepAlives:0, inShutdown:0, nextProtoOnce:sync.Once{done:0x0, m:sync.Mutex{state:0, sema:0x0}}, nextProtoErr:error(nil), mu:sync.Mutex{state:0, sema:0x0}, listeners:map[*net.Listener]struct {}(nil), activeConn:map[*http.conn]struct {}(nil), doneChan:(chan struct {})(nil), onShutdown:[]func()(nil)}","time":1595950305866272000}
+2020/07/28 23:31:47 {"callers":null,"level":"debug","message":"true \u0026{0xc0000c0500 map[] map[] map[] map[]}","time":1595950307817393000}
+2020/07/28 23:31:47 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950307820881000}
+2020/07/28 23:31:49 {"callers":null,"level":"debug","message":"false \u0026{0xc0000c1400 map[] map[] map[] map[]}","time":1595950309733055000}
+2020/07/28 23:31:49 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950309733250000}
+2020/07/28 23:31:49 {"callers":null,"level":"debug","message":"false \u0026{0xc000234000 map[] map[] map[] map[]}","time":1595950309934034000}
+2020/07/28 23:31:49 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950309934172000}
+2020/07/28 23:33:28 {"callers":null,"level":"info","message":"Logan db init success","time":1595950408920063000}
+2020/07/28 23:33:28 {"callers":null,"level":"info","message":"Server starting... \u0026http.Server{Addr:\":8000\", Handler:(*gin.Engine)(0xc0000d8000), TLSConfig:(*tls.Config)(nil), ReadTimeout:60000000000, ReadHeaderTimeout:0, WriteTimeout:60000000000, IdleTimeout:0, MaxHeaderBytes:1048576, TLSNextProto:map[string]func(*http.Server, *tls.Conn, http.Handler)(nil), ConnState:(func(net.Conn, http.ConnState))(nil), ErrorLog:(*log.Logger)(nil), BaseContext:(func(net.Listener) context.Context)(nil), ConnContext:(func(context.Context, net.Conn) context.Context)(nil), disableKeepAlives:0, inShutdown:0, nextProtoOnce:sync.Once{done:0x0, m:sync.Mutex{state:0, sema:0x0}}, nextProtoErr:error(nil), mu:sync.Mutex{state:0, sema:0x0}, listeners:map[*net.Listener]struct {}(nil), activeConn:map[*http.conn]struct {}(nil), doneChan:(chan struct {})(nil), onShutdown:[]func()(nil)}","time":1595950408920349000}
+2020/07/28 23:33:31 {"callers":null,"level":"debug","message":"false \u0026{0xc0000c0c80 map[] map[] map[] map[]}","time":1595950411597548000}
+2020/07/28 23:33:31 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950411597826000}
+2020/07/28 23:33:33 {"callers":null,"level":"debug","message":"false \u0026{0xc0000c1680 map[] map[] map[] map[]}","time":1595950413970654000}
+2020/07/28 23:33:33 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950413970798000}
+2020/07/28 23:33:34 {"callers":null,"level":"debug","message":"false \u0026{0xc00012e500 map[] map[] map[] map[]}","time":1595950414267193000}
+2020/07/28 23:33:34 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950414267370000}
+2020/07/28 23:33:34 {"callers":null,"level":"debug","message":"false \u0026{0xc0002fa000 map[] map[] map[] map[]}","time":1595950414464339000}
+2020/07/28 23:33:34 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950414464512000}
+2020/07/28 23:33:34 {"callers":null,"level":"debug","message":"false \u0026{0xc000234280 map[] map[] map[] map[]}","time":1595950414623519000}
+2020/07/28 23:33:34 {"callers":null,"level":"debug","message":"Translations error \u003cnil\u003e","time":1595950414623662000}

@@ -74,13 +74,13 @@ var doc = `{
                     "400": {
                         "description": "请求错误",
                         "schema": {
-                            "$ref": "#/definitions/errorcode.Error"
+                            "$ref": "#/definitions/errcode.Error"
                         }
                     },
                     "500": {
                         "description": "内部错误",
                         "schema": {
-                            "$ref": "#/definitions/errorcode.Error"
+                            "$ref": "#/definitions/errcode.Error"
                         }
                     }
                 }
@@ -102,7 +102,7 @@ var doc = `{
                 }
             }
         },
-        "errorcode.Error": {
+        "errcode.Error": {
             "type": "object",
             "properties": {
                 "code": {

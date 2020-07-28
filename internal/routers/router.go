@@ -1,6 +1,7 @@
 package routers
 
 import (
+	"net/http"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
@@ -20,9 +21,13 @@ func NewRouter() *gin.Engine {
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, swagerURL))
 	apiv1 := r.Group("/api/v1")
 
+	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
+
 	{
 		apiv1.GET("/tag", testmode.NewTag().Get)
 		apiv1.GET("/tags", testmode.NewTag().List)
+		apiv1.POST("/upload/file", UploadFile)
+
 	}
 
 	return r

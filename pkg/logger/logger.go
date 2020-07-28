@@ -171,7 +171,7 @@ func (l Level) String() string {
 	case LevelWarn:
 		return "warn"
 	case LevelError:
-		return "errorcode"
+		return "errcode"
 	case LevelFatal:
 		return "fatal"
 	case LevelPanic:
