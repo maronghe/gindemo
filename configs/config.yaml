@@ -19,15 +19,19 @@ App:
     - .jpeg
     - .png
 
-
 Database:
   DBType: mysql
   Username: root # fixme
-  Password: root # fixme
+  Password: rootroot # fixme
   Host: 127.0.0.1:3306 # fixme
-  DBName: test
+  DBName: local_test
   TablePrefix: blog_
   Charset: utf8
   ParseTime: True
   MaxIdleConns: 10
   MaxOpenConns: 30
+
+JWT:
+  Secret: loganMasecret
+  Issuer: blog-service
+  Expire: 7200

@@ -68,6 +68,12 @@ func setupSetting() error {
 		return err
 	}
 
+	err = setting.ReadSection("JWT", &global.JWTSetting)
+	if err != nil {
+		return err
+	}
+	global.JWTSetting.Expire *= time.Second
+
 	fmt.Println(global.DatabaseSetting)
 	return nil
 }

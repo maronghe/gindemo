@@ -12,6 +12,7 @@ import (
 )
 
 type Model struct {
+	ID int `json:"id"`
 }
 
 func NewDBEngine(databaseSetting *setting.DatabaseSettingS) (*gorm.DB, error) {

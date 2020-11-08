@@ -1,5 +1,7 @@
 package logger
 
+// TODO logger file need send more time
+
 import (
 	"context"
 	"encoding/json"
@@ -23,6 +25,8 @@ const (
 	LevelPanic
 )
 
+const Format = "2006-01-02 15:04:05.999999999 -0700 MST"
+
 type Logger struct {
 	newLogger *log.Logger
 	ctx       context.Context
@@ -40,7 +44,7 @@ func (l *Logger) JSONFormat(msg string) map[string]interface{} {
 	data := make(Fields, len(l.fields)+4)
 
 	data["level"] = l.level.String()
-	data["time"] = time.Now().Local().UnixNano()
+	data["time"] = time.Now().Local().Format(Format)
 	data["message"] = msg
 	data["callers"] = l.callers
 

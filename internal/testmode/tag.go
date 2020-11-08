@@ -41,7 +41,7 @@ func (t Tag) Get(c *gin.Context) {
 func (t Tag) List(c *gin.Context) {
 
 	params := struct {
-		Name  string `form:"name" binding="max=100"`
+		Name  string `form:"name" binding:"max=100"`
 		State uint8  `form:"state,default=1" binding:"oneof=0 1"`
 	}{}
 
